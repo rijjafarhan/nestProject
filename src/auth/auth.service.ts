@@ -4,10 +4,12 @@ import { AuthDto } from "./dto";
 import * as bcrypt from 'bcrypt';
 import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import { UpdateUserDto } from "./dto/updateUser.dto";
-
+import { JwtService } from "@nestjs/jwt";
+import { ConfigService } from '@nestjs/config';
 @Injectable()
 export class AuthService{
-    constructor(private prisma:PrismaService){}
+    constructor(private prisma:PrismaService, private jwt:JwtService,private config: ConfigService){}
+
     async signup(dto: AuthDto){
         const hashPass =  await bcrypt.hash(dto.password,12)
         try{
@@ -50,7 +52,7 @@ export class AuthService{
         if(!matchPass) throw new ForbiddenException('Credentials incorrect - incorrect password');
 
         delete user.hashPass
-        return user
+        return this.signToken(user.id,user.email)
 
 
     }
@@ -74,6 +76,27 @@ export class AuthService{
     
         return updatedUser;
       }
+
+      async signToken(
+        userId: number,
+        email: string
+      ): Promise<{ access_token: string} > {
+        const payload = {
+          sub: userId,
+          email
+        };
+      
+        const secret = this.config.get('JWT_SECRET');
+      
+        const token = await this.jwt.signAsync(payload, {
+          expiresIn: '10m', 
+          secret
+        });
+        return {
+            access_token:token
+        }
+      }
+      
 
 
 }
