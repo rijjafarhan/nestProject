@@ -34,14 +34,14 @@ $ yarn install
 
 ## Compile and run the project
 
-```bash
+
 # development
 $ yarn run start
 
 
 ## Role Based Actions
 
-```bash
+
 # RECEPTIONIST
 1- Add Customer
 2- Check Plates if the deal is complete, but the plates have not been processed
@@ -73,13 +73,13 @@ $ yarn run start
 2- Hold/Alert if there are any Issues
 3- Mark Make Ready Complete
 
-#FINANCE DIRECTOR
+# FINANCE DIRECTOR
 1- Can edit a deal
 
-#FINANCE ASSISTANT
+# FINANCE ASSISTANT
 1- Can mark a deal as admin billing returned
 
-#STATUS LOG
-#EXECUTIVE
-#GENERAL MANAGER
+# STATUS LOG
+# EXECUTIVE
+# GENERAL MANAGER
 
