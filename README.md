@@ -45,12 +45,16 @@ $ yarn run start
 ### RECEPTIONIST
 1- Add Customer
 
-2- Check Plates if the deal is complete, but the plates have not been processed
+2- Notify salesperson
+
+3- Check Plates if the deal is complete, but the plates have not been processed
 
 ### SALESPERSON
 1- Add Customer
 
-2- ID Verification
+2- Accept or decline incoming Customer
+
+3- ID Verification
 
 ### SALESMANAGER
 1- Create Deal ( The deal information is pulled from the CDK.)
@@ -68,11 +72,13 @@ $ yarn run start
 7- Can edit a deal
 
 ### FINANCE MANAGER
-1- Can manualy enter Info into Contract Status
+1- Accept or decline a deal
 
-2- Mark as Finance Complete
+2- Can manualy enter Info into Contract Status (if Customer Signs)
 
-3- Send deal to Accountant
+3- Mark a deal as Finance Complete
+
+4- Send deal to Accountant
 
 ### ACCOUNTANT
 1- Mark Deal as Finalized
@@ -80,11 +86,13 @@ $ yarn run start
 2- Return Deal to Finance Manager
 
 ### MAKE READY
-1- Save Make Ready Ticket
+1- Accept or decline a ticket
 
-2- Hold/Alert if there are any Issues
+2- Save Make Ready Ticket
 
-3- Mark Make Ready Complete
+3- Hold/Alert if there are any Issues
+
+4- Mark Make Ready Complete
 
 ### FINANCE DIRECTOR
 1- Can edit a deal
