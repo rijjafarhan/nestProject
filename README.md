@@ -38,8 +38,10 @@ $ yarn install
 # development
 $ yarn run start
 
-## Deal Creation Process
 
+## Role Based Actions
+
+```bash
 # RECEPTIONIST
 1- Add Customer
 2- Check Plates if the deal is complete, but the plates have not been processed
@@ -53,12 +55,12 @@ $ yarn run start
 2- Save Deal
 3- Send to F&I
 4- Create Make Ready Ticket
-5- send  ticket to make ready
-6- can Add Comments/Missing Docs
+5- Send  ticket to make ready
+6- Can Add Comments/Missing Docs
 7- Can edit a deal
 
 # FINANCE MANAGER
-1- can manualy enter Info into Contract Status
+1- Can manualy enter Info into Contract Status
 2- Mark as Finance Complete
 3- Send deal to Accountant
 
@@ -80,3 +82,4 @@ $ yarn run start
 #STATUS LOG
 #EXECUTIVE
 #GENERAL MANAGER
+
