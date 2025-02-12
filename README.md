@@ -35,22 +35,23 @@ $ yarn install
 ## Compile and run the project
 
 
-# development
+### development
 $ yarn run start
 
 
 ## Role Based Actions
 
 
-# RECEPTIONIST
+### RECEPTIONIST
 1- Add Customer
+
 2- Check Plates if the deal is complete, but the plates have not been processed
 
-# SALESPERSON
+### SALESPERSON
 1- Add Customer
 2- ID Verification
 
-# SALESMANAGER
+### SALESMANAGER
 1- Create Deal ( The deal information is pulled from the CDK.)
 2- Save Deal
 3- Send to F&I
@@ -59,27 +60,27 @@ $ yarn run start
 6- Can Add Comments/Missing Docs
 7- Can edit a deal
 
-# FINANCE MANAGER
+### FINANCE MANAGER
 1- Can manualy enter Info into Contract Status
 2- Mark as Finance Complete
 3- Send deal to Accountant
 
-# ACCOUNTANT
+### ACCOUNTANT
 1- Mark Deal as Finalized
 2- Return Deal to Finance Manager
 
-# MAKE READY
+### MAKE READY
 1- Save Make Ready Ticket
 2- Hold/Alert if there are any Issues
 3- Mark Make Ready Complete
 
-# FINANCE DIRECTOR
+### FINANCE DIRECTOR
 1- Can edit a deal
 
-# FINANCE ASSISTANT
+### FINANCE ASSISTANT
 1- Can mark a deal as admin billing returned
 
-# STATUS LOG
-# EXECUTIVE
-# GENERAL MANAGER
+### STATUS LOG
+### EXECUTIVE
+### GENERAL MANAGER
 
