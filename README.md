@@ -49,29 +49,41 @@ $ yarn run start
 
 ### SALESPERSON
 1- Add Customer
+
 2- ID Verification
 
 ### SALESMANAGER
 1- Create Deal ( The deal information is pulled from the CDK.)
+
 2- Save Deal
+
 3- Send to F&I
+
 4- Create Make Ready Ticket
+
 5- Send  ticket to make ready
+
 6- Can Add Comments/Missing Docs
+
 7- Can edit a deal
 
 ### FINANCE MANAGER
 1- Can manualy enter Info into Contract Status
+
 2- Mark as Finance Complete
+
 3- Send deal to Accountant
 
 ### ACCOUNTANT
 1- Mark Deal as Finalized
+
 2- Return Deal to Finance Manager
 
 ### MAKE READY
 1- Save Make Ready Ticket
+
 2- Hold/Alert if there are any Issues
+
 3- Mark Make Ready Complete
 
 ### FINANCE DIRECTOR
