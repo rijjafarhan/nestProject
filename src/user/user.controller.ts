@@ -9,10 +9,10 @@ export class UserController {
     @Get('test')
     getUser(@Req() req:Request)
     {
-        console.log({
-            user:req.user,
-        })
-        return  req.user
+        // console.log({
+        //     user:req.user,
+        // })
+        // return  req.user
 
     }
 

@@ -6,6 +6,8 @@ import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import { UpdateUserDto } from "./dto/updateUser.dto";
 import { JwtService } from "@nestjs/jwt";
 import { ConfigService } from '@nestjs/config';
+
+
 @Injectable()
 export class AuthService{
     constructor(private prisma:PrismaService, private jwt:JwtService,private config: ConfigService){}
@@ -13,9 +15,11 @@ export class AuthService{
     async signup(dto: AuthDto){
         const hashPass =  await bcrypt.hash(dto.password,12)
         try{
+           
         const user =  await this.prisma.user.create({
                 data:{
                     email:dto.email,
+                    role:dto.role,
                     hashPass
                 },
         })
@@ -40,7 +44,8 @@ export class AuthService{
         const user = await this.prisma.user.findUnique(
            {
             where:{
-                email:dto.email
+                email:dto.email, 
+                role:dto.role
             }
            }
         )
@@ -71,6 +76,7 @@ export class AuthService{
 
             firstName: dto.firstName,
             lastName: dto.lastName,
+            role: dto.role
           },
         });
     
